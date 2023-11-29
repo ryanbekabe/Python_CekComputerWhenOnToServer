@@ -1,0 +1,25 @@
+[Unit]
+Description=hanyajasa.com
+After=network.target
+
+[Service]
+Type=simple
+RemainAfterExit=true
+#Restart=always
+#RestartSec=2
+#KillMode=mixed
+#LimitNOFILE=49152
+#WorkingDirectory=/opt/getscreen.me
+ExecStart=/usr/bin/python3 /usr/bin/hanyajasacom/hanyajasacom.py
+#ExecStart=/opt/getscreen.me/getscreen.me -daemon
+
+[Install]
+WantedBy=multi-user.target
+#WantedBy=default.target
+
+#systemctl enable hanyajasacom.service
+#systemctl disable hanyajasacom.service
+#systemctl start hanyajasacom.service
+#systemctl status hanyajasacom.service
+#/etc/systemd/system/hanyajasacom.service
+#systemctl daemon-reload
